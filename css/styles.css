@@ -2,22 +2,49 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #434455;
   background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
   list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 h1,
 h2,
 h3 {
   font-family: 'Roboto', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .header {
   background-color: #ffffff;
+  height: auto;
+  flex-shrink: 0;
+  border-bottom: 1px solid #e7e9fc;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
+.section {
+  padding: 120px 0;
+}
 /* logo style */
 
 .logo {
@@ -29,6 +56,12 @@ h3 {
   font-weight: 700;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.54px;
+  display: inline-block;
+  height: 24px;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 76px;
+  padding-top: 24px;
 }
 
 .logo-part {
@@ -41,7 +74,12 @@ h3 {
 .links:focus {
   color: #404bbf;
 }
-
+.nav-menu {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-grow: 1;
+}
 .nav-link {
   color: currentColor;
   text-decoration: none;
@@ -54,6 +92,10 @@ h3 {
 
 .address-list {
   font-style: normal;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 40px;
+  flex-grow: 1;
 }
 .address-link {
   font-size: 16px;
@@ -67,8 +109,19 @@ h3 {
 
 .baner {
   background-color: #2e2f42;
+  height: 600px;
+  flex-shrink: 0;
+  width: 100%;
+  padding: 188px 0;
 }
-
+.baner-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+}
 .baner-title {
   text-align: center;
   color: #ffffff;
@@ -76,11 +129,19 @@ h3 {
   font-weight: 700;
   line-height: 1.07; /* 107.143% */
   letter-spacing: 0.02em;
+  padding-bottom: 48px;
+  max-width: 496px;
 }
 
 .baner-button {
   cursor: pointer;
   background-color: #4d5ae5;
+  display: inline-flex;
+  padding: 16px 32px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 4px;
+  min-width: 169px;
   /* button text*/
   color: #ffffff;
   font-size: 16px;
@@ -100,7 +161,12 @@ h3 {
 .features-container {
   background-color: #ffffff;
 }
-
+.features-list {
+  display: flex;
+  width: calc((100% - 3 * 24px) / 4);
+  align-items: flex-start;
+  gap: 8px;
+}
 .features-title {
   font-size: 20px;
   font-weight: 500;
@@ -113,14 +179,20 @@ h3 {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
+  width: 264px;
 }
 
 /* Team section style */
 
 .team-container {
   background-color: #f4f4fd;
+  height: 732px;
+  flex-shrink: 0;
 }
-
+.team-card-list {
+  display: flex;
+  gap: 24px;
+}
 .team-container-title {
   text-align: center;
   font-size: 36px;
@@ -129,12 +201,21 @@ h3 {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-bottom: 72px;
 }
 
 .team-card {
   background-color: #ffffff;
+  display: inline-flex;
+  padding-bottom: 32px;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 4px;
 }
 
+.team-member-info {
+  gap: 8px;
+}
 .team-cards-title {
   text-align: center;
   font-size: 20px;
@@ -165,12 +246,27 @@ h3 {
   letter-spacing: 0.72px;
   text-transform: capitalize;
   color: #2e2f42;
+  padding-bottom: 72px;
 }
 
+.portfolio-cards-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .portfolio-cards {
   background-color: #ffffff;
+  display: flex;
+  width: 360px;
+  height: 420px;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex-shrink: 0;
+  border: 1px solid #e7e9fc;
 }
-
 .portfolio-cards-title {
   font-size: 20px;
   font-weight: 500;
@@ -178,7 +274,18 @@ h3 {
   letter-spacing: 0.4px;
   color: #2e2f42;
 }
-
+.row-1 {
+  margin-bottom: 48px;
+}
+.portfolio-cards-info {
+  display: flex;
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
 .portfolio-cards-content {
   font-size: 16px;
   line-height: 1.5; /* 150% */
@@ -189,6 +296,8 @@ h3 {
 
 .footer-container {
   background-color: #2e2f42;
+  height: 312px;
+  flex-shrink: 0;
 }
 
 .footer-logo {
@@ -200,6 +309,9 @@ h3 {
   letter-spacing: 0.54px;
   text-transform: uppercase;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 100px;
 }
 .footer-logo-part {
   color: #f4f4fd;
@@ -209,4 +321,5 @@ h3 {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.32px;
   color: #f4f4fd;
+  width: 264px;
 }

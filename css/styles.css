@@ -281,6 +281,7 @@ img {
   gap: 24px;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 48px;
 }
 .portfolio-cards {
   background-color: #ffffff;
@@ -301,9 +302,6 @@ img {
   letter-spacing: 0.4px;
   color: #2e2f42;
 }
-.row {
-  margin-bottom: 48px;
-}
 .portfolio-cards-info {
   display: flex;
   padding: 0px 16px;
@@ -314,6 +312,8 @@ img {
   align-self: stretch;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
+  border-top: none;
+  margin-bottom: 8px;
 }
 .portfolio-cards-content {
   font-size: 16px;
